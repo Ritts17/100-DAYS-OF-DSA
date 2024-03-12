@@ -6,20 +6,23 @@ int main()
 {
     //Bitwise operators are AND, OR, NOT, XOR
     //We also have bitwise leftshift and rightshift operators
-    int a=5,b=7;
+    int a=28,b=7;
     bool ans=true;
     cout<< (a & b) <<" "<< (a|b) <<" "<< (~a) <<" "<< (~b)<<" ";
     cout<<(a<<b)<<" "<<~ans;
-    a=5;
+    a=28;
     int result = ~a;
 
     cout << result << endl;
-    cout << "Original: " << bitset<3>(a) << endl;
-    cout << "Result:   " << bitset<3>(result) << endl;
+    cout << "Original: " << bitset<5>(a) << endl;
+    cout << "Result:   " << bitset<5>(result) << endl;
 
-    result = ~a & 0x7;  // 0x7 is used to mask the bits and limit the representation to 3 bits
+    result = ~a & 0x1F;  // 0x7 is used to mask the bits and limit the representation to 3 bits
 
     cout << result << endl;
+
+        cout << "Result:   " << bitset<5>(result) << endl;
+
 
     //Funfact: If you repeatedly leftshift a number by 1 then the new number is always twice as previous number
     int val1=5;

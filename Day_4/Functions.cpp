@@ -24,13 +24,11 @@ int IsPalindrome(int N)
     int num=N;
     while(true)
     {
+        num++;
         bool flag=check(num);
         if(flag==1)
         {
             return num;
-        }
-        else{
-            num=num+1;
         }
     }
 }
