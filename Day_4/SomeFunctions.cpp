@@ -42,7 +42,7 @@ void SetBits(int num)
     cout<<sum<<endl;
 }
 
-void DecimaltoBinary(int num)
+int DecimaltoBinary(int num)
 {
     string temp;
     string sum="";
@@ -75,25 +75,26 @@ void DecimaltoBinary(int num)
             i++;
             j--;
         }
-        cout<<sum<<endl;
     }
+    int final=stoi(sum);
+    return final;
 }
 
 int main()
 {
     //Print all digits in an Integer
     int num;
-    // cin>>num;
-    // PrintDigit(num);
+    cin>>num;
+    PrintDigit(num);
     //Create number using digits
     int a,b;
-    // cin>>a>>b;
-    // CreateDigits(a,b);
+    cin>>a>>b;
+    CreateDigits(a,b);
     //Print number of set bits
-    // cin>>num;
-    // SetBits(num);
+    cin>>num;
+    SetBits(num);
     //Print Binary equvalent of given decimal number
     cin>>num;
-    DecimaltoBinary(num);
-    // cout<<a<<endl;
+    int a=DecimaltoBinary(num);
+    cout<<a<<endl;
 }
